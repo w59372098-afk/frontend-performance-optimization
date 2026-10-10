@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A lightweight, responsive article page demonstrating front-end performance optimization.">
+  <meta name="theme-color" content="#101827">
+  <title>Performance Lab | A Faster Web Page</title>
+  <link rel="preload" href="assets/hero.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.min.css">
+  <script src="app.min.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Performance Lab home"><span class="brand-mark" aria-hidden="true">P</span> Performance Lab</a>
+    <nav aria-label="Main navigation"><a href="#principles">Principles</a><a href="#checklist">Checklist</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FRONT-END ENGINEERING</p>
+        <h1>A faster page feels better.</h1>
+        <p class="lead">A compact demonstration of practical performance improvements: efficient assets, responsive styling, deferred JavaScript, and less work for the browser.</p>
+        <a class="cta" href="#checklist">Explore the checklist <span aria-hidden="true">→</span></a>
+      </div>
+      <img class="hero-image" src="assets/hero.svg" width="560" height="380" alt="Illustration of a browser window with a speed gauge" fetchpriority="high">
+    </section>
+    <section id="principles" class="section">
+      <div class="section-heading"><p class="eyebrow">THE APPROACH</p><h2>Performance by design</h2><p>Optimize what users download, how quickly it renders, and how much work the main thread performs.</p></div>
+      <div class="cards">
+        <article class="card"><span class="card-icon" aria-hidden="true">01</span><h3>Lean assets</h3><p>Use a small vector hero illustration, avoid unnecessary libraries, and keep styles and scripts compact.</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">02</span><h3>Fast rendering</h3><p>Set image dimensions to reduce layout shifts and preload only the important above-the-fold visual.</p></article>
+        <article class="card"><span class="card-icon" aria-hidden="true">03</span><h3>Responsive UX</h3><p>Use flexible layouts, visible keyboard focus, reduced-motion support, and clear navigation.</p></article>
+      </div>
+    </section>
+    <section id="checklist" class="section checklist-section">
+      <div><p class="eyebrow">QUICK AUDIT</p><h2>Page readiness checklist</h2><p>Mark the checks as you review this demo. The status is announced to assistive technology.</p></div>
+      <div class="checklist">
+        <label><input type="checkbox"> Critical image has dimensions and priority</label>
+        <label><input type="checkbox"> JavaScript is deferred</label>
+        <label><input type="checkbox"> Layout adapts to small screens</label>
+        <label><input type="checkbox"> Keyboard focus is clearly visible</label>
+        <p id="check-status" class="status" role="status" aria-live="polite">0 of 4 checks completed</p>
+      </div>
+    </section>
+  </main>
+  <footer><p>Performance Lab · Educational optimization project</p><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
